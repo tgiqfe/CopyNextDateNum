@@ -29,7 +29,7 @@ namespace CopyNextDateNum
                             string format = "{0}_{1:" + new string('0', tempNum.Length) + "}";
                             string newDateNum = string.Format(format,
                                 DateTime.Now.ToString("yyyyMMdd"),
-                                (int.Parse(tempDateNum.Substring(9))) + i);
+                                (int.Parse(tempNum)) + i);
                             newFileName = tempFileName.Replace(tempDateNum, newDateNum);
                             if (!File.Exists(newFileName)) { break; }
                         }
